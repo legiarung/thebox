@@ -1,0 +1,70 @@
+.menu {
+    display: flex;
+    margin: 5px 0 0 0;
+
+    &__header {
+        transition: all 0.3s ease-in-out;
+        padding: 5px 0;
+        background-color: #fff;
+        display: table;
+        width: 100%;
+        position: relative;
+        top: 0;
+        border-bottom: 1px solid #ebebeb;
+        z-index: 999;
+    }
+
+    &__left {
+        width: 60%;
+        display: flex;
+    }
+
+    &__logo {
+        width: 15%;
+    }
+
+    &__nav {
+        width: 75%;
+        margin: 5px 10px 0 30px;
+    }
+
+    &__ul {
+        display: flex;
+    }
+
+    &__li {
+        margin: 0 5px;
+        position: relative;
+    }
+
+    &__right {
+        width: 40%;
+        display: flex;
+    }
+
+    &__search {
+        width: 80%;
+        display: flex;
+    }
+
+    &__inputsearch {
+        width: 80%;
+        font-size: 12px;
+        padding-top: 2px;
+        height: 34px;
+        margin-top: 3px;
+        color: #7a7a7a;
+        border-radius: 20px;
+    }
+
+    &__notification {
+        width: 20%;
+    }
+
+    &__sign {
+        width: 20%;
+        align-items: center;
+        font-size: 12px;
+        color: #7a7a7a;
+    }
+}

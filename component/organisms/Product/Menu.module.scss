@@ -1,0 +1,59 @@
+.list__kol {
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.product__item {
+    width: 33.33%;
+    margin: 0 0 5px;
+    padding: 5px;
+}
+.product__br {
+    background-color: yellowgreen;
+    border-radius: 10px;
+    height: 320px;
+}
+
+.noti {
+    width: 100%;
+    margin: 30px 0;
+}
+
+.submenu__ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.submenu__li {
+    padding: 0 10px 0 0;
+}
+
+.submenu {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.infokol {
+    color: #293b57;
+    text-align: center;
+    padding: 10px 0px;
+}
+
+.namekol {
+    color: #7a7a7a;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.flowkol {
+    color: #7a7a7a;
+}
+
+.main__home {
+    background-color: #f1f1f1;
+}
