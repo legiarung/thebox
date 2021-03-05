@@ -8,7 +8,6 @@ export const fetchProducts = () => async dispatch => {
     try {
         const res = await get('https://5e83062078337f00160ae8ec.mockapi.io/api/products')
         dispatch(setCampaigns(res.data))
-        console.log(res.data)
     } catch (e) {
         console.log('error')
     }
@@ -43,11 +42,15 @@ export const fetchProducts = () => async dispatch => {
 //     }
 // }
 
-const initialState = {
+interface ConponCampaignState {
     campaigns: []
 }
 
-export default handleActions(
+const initialState: ConponCampaignState = {
+    campaigns: []
+}
+
+export default handleActions<ConponCampaignState>(
     {
         [SET_CAMPAIGNS]: (state, { payload }) => ({
             ...state,
