@@ -62,6 +62,11 @@ const index = () => {
                         </div>
                         <div className={style.menu__sign}>Đăng Nhập</div>
                     </div>
+                    <div className={style.menu__mobile} >
+                        <span className={style.menu__mobile_span}></span>
+                        <span className={style.menu__mobile_span}></span>
+                        <span className={style.menu__mobile_span}></span>
+                    </div>
 
                 </div>
             </div>

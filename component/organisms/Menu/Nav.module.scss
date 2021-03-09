@@ -128,4 +128,78 @@
         color: #7a7a7a;
         line-height: 45px;
     }
+
+    &__mobile {
+        display: none;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+    .menu {
+        &__container {
+            padding: 0;
+        }
+
+        &__left {
+            width: 40%;
+        }
+
+        &__logo {
+            width: 100%;
+        }
+
+        &__right {
+            width: 50%;
+        }
+
+        &__search {
+            width: 100%;
+        }
+
+        &__input {
+            width: 75%;
+        }
+
+        &__notification {
+            width: 25%;
+        }
+
+        &__nav {
+            display: none;
+        }
+
+        &__sign {
+            display: none;
+        }
+
+        &__mobile {
+            width: 10%;
+            display: block;
+            position: absolute;
+            top: 11px;
+            right: 10px;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+        }
+
+        &__mobile_span {
+            position: absolute;
+            top: 5px;
+            left: 8px;
+            width: 25px;
+            height: 2px;
+            background-color: #6d6d6d;
+            transition: all 0.3s ease-in-out;
+            &:nth-child(1) {
+                top: 10px;
+            }
+            &:nth-child(2) {
+                top: 18px;
+            }
+            &:nth-child(3) {
+                top: 26px;
+            }
+        }
+    }
 }

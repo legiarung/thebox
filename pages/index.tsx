@@ -1,10 +1,9 @@
 import React from 'react'
-import Head from 'next/head'
 import Menu from '../component/organisms/Menu/index'
 import Product from '../component/organisms/Product/index'
 import Footer from '../component/organisms/Footer/index'
 
-const Home: React.FC = () => {
+const index: React.FC = () => {
   return (
     <>
       <Menu />
@@ -14,4 +13,4 @@ const Home: React.FC = () => {
   )
 }
 
-export default Home
+export default index
