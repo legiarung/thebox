@@ -16,11 +16,10 @@
     }
 
     &__header {
-        transition: all 0.3s ease-in-out;
         background-color: #fff;
         display: table;
         width: 100%;
-        position: relative;
+        position: sticky;
         top: 0;
         border-bottom: 1px solid #ebebeb;
         z-index: 999;
@@ -118,6 +117,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        cursor: pointer;
     }
 
     &__sign {
@@ -127,6 +127,7 @@
         font-size: 13px;
         color: #7a7a7a;
         line-height: 45px;
+        cursor: pointer;
     }
 
     &__mobile {
@@ -177,7 +178,7 @@
             display: block;
             position: absolute;
             top: 11px;
-            right: 10px;
+            right: 0;
             width: 40px;
             height: 40px;
             cursor: pointer;
@@ -200,6 +201,58 @@
             &:nth-child(3) {
                 top: 26px;
             }
+        }
+
+        &__delete {
+            width: 10%;
+            display: block;
+            position: absolute;
+            z-index: 2;
+            top: 11px;
+            right: 0;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+        }
+
+        &__delete_span {
+            position: absolute;
+            top: 5px;
+            left: 8px;
+            width: 25px;
+            height: 2px;
+            background-color: #6d6d6d;
+            transition: all 0.3s ease-in-out;
+            &:nth-child(1) {
+                transform: rotate(-47deg);
+                top: 17px;
+            }
+            &:nth-child(2) {
+                transform: rotate(41deg);
+                top: 17px;
+            }
+        }
+
+        &__nav_mobile {
+            display: block;
+            position: absolute;
+            width: 100%;
+            top: 60px;
+            right: 0px;
+            background: #fff;
+            animation: 3s linear 0.1s color It;
+        }
+
+        &__ul {
+            display: block;
+            padding: 0;
+            margin: 0;
+        }
+
+        &__li {
+            padding: 10px 0;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
         }
     }
 }

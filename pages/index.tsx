@@ -1,16 +1,13 @@
 import React from 'react'
-import Menu from '../component/organisms/Menu/index'
+import Layout from '../component/organisms/Layout/index'
 import Product from '../component/organisms/Product/index'
-import Footer from '../component/organisms/Footer/index'
 
-const index: React.FC = () => {
+export default function Home() {
   return (
     <>
-      <Menu />
-      <Product />
-      <Footer />
+      <Layout title='TheBox' >
+        <Product />
+      </Layout>
     </>
   )
 }
-
-export default index

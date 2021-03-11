@@ -1,11 +1,13 @@
 import React from 'react';
 import Europe from '../../component/modcules/Europe/index'
+import Layout from '../../component/organisms/Layout'
 
 const index = () => {
     return (
         <div>
-            <Europe />
-
+            <Layout >
+                <Europe />
+            </Layout>
         </div>
     );
 };

@@ -15,7 +15,7 @@ const index = () => {
     // }, [])
 
     return (
-        <div></div>
+        <Japan />
     );
 };
 

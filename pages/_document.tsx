@@ -6,7 +6,6 @@ export default class MyDocument extends Document {
         return (
             <Html lang="en">
                 <Head>
-
                     <meta charSet="utf-8" />
                     <meta content="IE=edge" />
                     <link rel="icon" href="/favicon.ico" />

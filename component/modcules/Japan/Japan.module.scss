@@ -102,4 +102,32 @@
 .product__img {
     width: 100%;
     height: 100%;
+    border-radius: 15px;
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+    .main {
+        &__menu {
+            display: block;
+        }
+
+        &__menu__sort {
+            display: block;
+            text-align: end;
+            padding: 10px 0 0;
+        }
+
+        &__menu__sort {
+            margin: 0 5px 0 0;
+        }
+    }
+
+    .product__item {
+        width: 50%;
+    }
+
+    .product__br {
+        height: 187px;
+        margin: 0 5px 0 0;
+    }
 }

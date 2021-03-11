@@ -1,15 +1,17 @@
 import React from 'react';
-import Japan from '../../component/modcules/Japan/index'
 import Layout from '../../component/organisms/Layout';
 
 
-
 const index = () => {
+    const title = 'Liên Hệ'
     return (
         <div>
             <Layout>
-                <Japan />
+                <div>
+                    <img src="/comingsoon.png" />
+                </div>
             </Layout>
+
         </div>
     );
 };
