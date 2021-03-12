@@ -10,27 +10,25 @@ var classNames = require('classnames');
 
 
 const index = () => {
-    const [navBar, setnavBar] = useState(false);
+    // const [navBar, setnavBar] = useState(false);
     const [showMenu, setshowMenu] = useState(false);
-    const changeNavbar = () => {
-        if (window.scrollY > 60) {
-            setnavBar(true)
-        } else {
-            setnavBar(false)
-        }
-    }
-    useEffect(() => {
-        window.addEventListener('scroll', changeNavbar)
-    });
+    // const changeNavbar = () => {
+    //     if (window.scrollY > 60) {
+    //         setnavBar(true)
+    //     } else {
+    //         setnavBar(false)
+    //     }
+    // }
+    // useEffect(() => {
+    //     window.addEventListener('scroll', changeNavbar)
+    // });
 
     const ShowMenu = () => setshowMenu(!showMenu)
     const RemoveMenu = () => setshowMenu(!showMenu)
 
 
     return (
-        <div className={classNames({
-            [style.menu__header]: navBar
-        })}>
+        <div className={style.menu__header}>
             <div className={style.menu__container}>
                 <div className={style.menu}>
                     <div className={style.menu__left}>

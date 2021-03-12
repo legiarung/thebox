@@ -2,6 +2,7 @@ import React from 'react';
 import Menu from '../Menu/index'
 import Footer from '../Footer/index'
 import Head from "next/head";
+import style from './Layout.module.scss'
 
 
 const index = (props: any) => {
@@ -15,7 +16,7 @@ const index = (props: any) => {
                 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,500;0,700;1,200;1,400;1,500;1,700&amp;display=swap" rel="stylesheet"></link>
             </Head>
             <Menu />
-            <div>{props.children}</div>
+            <div className={style.container}>{props.children}</div>
             <Footer />
         </div>
     );

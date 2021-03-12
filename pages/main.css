@@ -26,3 +26,12 @@ ul {
 a {
     text-decoration: none;
 }
+
+.container {
+    max-width: 1000px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 100%;
+}
