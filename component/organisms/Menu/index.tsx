@@ -49,20 +49,20 @@ const index = () => {
                                         <a className={style.menu__li_a}>Trang Chủ</a>
                                     </Link></li>
                                 <li className={style.menu__li}>
-                                    <Link href="/diendan">
+                                    <Link href="/forum">
                                         <a className={style.menu__li_a}>Diễn Đàn</a>
                                     </Link>
                                 </li>
                                 <li className={style.menu__li}>
-                                    <Link href="/timkiem">
+                                    <Link href="/search">
                                         <a className={style.menu__li_a}>Tìm kiếm</a>
                                     </Link></li>
                                 <li className={style.menu__li}>
-                                    <Link href="/sosanh">
+                                    <Link href="/compare">
                                         <a className={style.menu__li_a}>So Sánh</a>
                                     </Link></li>
                                 <li className={style.menu__li}>
-                                    <Link href="/lienhe">
+                                    <Link href="/contact">
                                         <a className={style.menu__li_a}>Liên Hệ</a>
                                     </Link></li>
                             </ul>

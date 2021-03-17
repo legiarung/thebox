@@ -1,0 +1,69 @@
+.card {
+    &__item {
+        width: 33.33%;
+        margin: 0 0 10px 0;
+    }
+
+    &__br {
+        margin: 0 10px 0 0px;
+        position: relative;
+    }
+
+    &__img {
+        width: 100%;
+        border-radius: 15px;
+        height: 100%;
+    }
+    &__info {
+        position: absolute;
+        z-index: 4;
+        bottom: 0px;
+        width: 100%;
+        text-align: center;
+        bottom: 15px;
+    }
+    &__name {
+        font-size: 13px;
+        font-weight: 700;
+        color: #fff;
+    }
+
+    &__rank {
+        font-size: 11px;
+        color: #fff;
+    }
+
+    &__nation {
+        font-size: 12px;
+        color: #fff;
+    }
+
+    &__lop {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 0 0 20px 0;
+        color: #fff;
+        text-align: center;
+        z-index: 1;
+        pointer-events: none;
+        padding-top: 50px;
+
+        &:before {
+            content: " ";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgb(0, 0, 0);
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.8687850140056023) 0%, rgba(0, 0, 0, 0) 100%);
+            z-index: 1;
+            pointer-events: none;
+            transition: all 0.3s ease-in-out;
+            opacity: 1;
+            border-radius: 15px;
+        }
+    }
+}

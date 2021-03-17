@@ -27,11 +27,18 @@ a {
     text-decoration: none;
 }
 
-.container {
-    max-width: 1000px;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    height: 100%;
+.slick-next {
+    left: 98%;
+}
+
+.slick-prev {
+    left: 1%;
+    position: absolute;
+    z-index: 1;
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+    .slick-next {
+        left: 93%;
+    }
 }

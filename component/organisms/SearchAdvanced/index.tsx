@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Card from '../../modcules/Card/index'
 import style from './SearchAdvanced.module.scss'
 var classNames = require('classnames');
 
@@ -41,14 +42,6 @@ const index = () => {
                                     <label className="form-check-label small text-uppercase card-link-secondary" htmlFor="renewed">Renewed</label>
                                 </div>
                             </section>
-                            {/* Section: Condition */}
-                            {/* Section: Average */}
-
-                            {/* Section: Average */}
-                            {/* Section: Price */}
-
-                            {/* Section: Price */}
-                            {/* Section: Price version 2 */}
                             <section className="mb-4">
                                 <h6 className="font-weight-bold mb-3">Price</h6>
                                 <div className="slider-price d-flex align-items-center my-4">
@@ -59,12 +52,6 @@ const index = () => {
                                     <span className="font-weight-normal small text-muted ml-2">$100</span>
                                 </div>
                             </section>
-                            {/* Section: Price version 2 */}
-                            {/* Section: Size */}
-
-                            {/* Section: Size */}
-                            {/* Section: Color */}
-                            {/* Section: Color */}
                         </section>
                     </form>
                 </div>
@@ -75,138 +62,7 @@ const index = () => {
                     </small>
                     </div>
                     <div className={style.search__list}>
-                        <div className={style.search__item}>
-                            <div className={style.search__br}>
-                                <img className={style.search__img} src="/imgtest.png" />
-                                <div className={style.search__info}>
-                                    <div className={style.search__name}>Name</div>
-                                    <div className={style.search__rank}>Rank</div>
-                                    <div className={style.search__nation}>Quoc Gia</div>
-                                </div>
-                                <div className={style.search__lop}></div>
-                            </div>
-                        </div>
-                        <div className={style.search__item}>
-                            <div className={style.search__br}>
-                                <img className={style.search__img} src="/imgtest.png" />
-                                <div className={style.search__info}>
-                                    <div className={style.search__name}>Name</div>
-                                    <div className={style.search__rank}>Rank</div>
-                                    <div className={style.search__nation}>Quoc Gia</div>
-                                </div>
-                                <div className={style.search__lop}></div>
-                            </div>
-                        </div>
-                        <div className={style.search__item}>
-                            <div className={style.search__br}>
-                                <img className={style.search__img} src="/imgtest.png" />
-                                <div className={style.search__info}>
-                                    <div className={style.search__name}>Name</div>
-                                    <div className={style.search__rank}>Rank</div>
-                                    <div className={style.search__nation}>Quoc Gia</div>
-                                </div>
-                                <div className={style.search__lop}></div>
-                            </div>
-                        </div>
-                        <div className={style.search__item}>
-                            <div className={style.search__br}>
-                                <img className={style.search__img} src="/imgtest.png" />
-                                <div className={style.search__info}>
-                                    <div className={style.search__name}>Name</div>
-                                    <div className={style.search__rank}>Rank</div>
-                                    <div className={style.search__nation}>Quoc Gia</div>
-                                </div>
-                                <div className={style.search__lop}></div>
-                            </div>
-                        </div>
-                        <div className={style.search__item}>
-                            <div className={style.search__br}>
-                                <img className={style.search__img} src="/imgtest.png" />
-                                <div className={style.search__info}>
-                                    <div className={style.search__name}>Name</div>
-                                    <div className={style.search__rank}>Rank</div>
-                                    <div className={style.search__nation}>Quoc Gia</div>
-                                </div>
-                                <div className={style.search__lop}></div>
-                            </div>
-                        </div>
-                        <div className={style.search__item}>
-                            <div className={style.search__br}>
-                                <img className={style.search__img} src="/imgtest.png" />
-                                <div className={style.search__info}>
-                                    <div className={style.search__name}>Name</div>
-                                    <div className={style.search__rank}>Rank</div>
-                                    <div className={style.search__nation}>Quoc Gia</div>
-                                </div>
-                                <div className={style.search__lop}></div>
-                            </div>
-                        </div>
-                        <div className={style.search__item}>
-                            <div className={style.search__br}>
-                                <img className={style.search__img} src="/imgtest.png" />
-                                <div className={style.search__info}>
-                                    <div className={style.search__name}>Name</div>
-                                    <div className={style.search__rank}>Rank</div>
-                                    <div className={style.search__nation}>Quoc Gia</div>
-                                </div>
-                                <div className={style.search__lop}></div>
-                            </div>
-                        </div>
-                        <div className={style.search__item}>
-                            <div className={style.search__br}>
-                                <img className={style.search__img} src="/imgtest.png" />
-                                <div className={style.search__info}>
-                                    <div className={style.search__name}>Name</div>
-                                    <div className={style.search__rank}>Rank</div>
-                                    <div className={style.search__nation}>Quoc Gia</div>
-                                </div>
-                                <div className={style.search__lop}></div>
-                            </div>
-                        </div>
-                        <div className={style.search__item}>
-                            <div className={style.search__br}>
-                                <img className={style.search__img} src="/imgtest.png" />
-                                <div className={style.search__info}>
-                                    <div className={style.search__name}>Name</div>
-                                    <div className={style.search__rank}>Rank</div>
-                                    <div className={style.search__nation}>Quoc Gia</div>
-                                </div>
-                                <div className={style.search__lop}></div>
-                            </div>
-                        </div>
-                        <div className={style.search__item}>
-                            <div className={style.search__br}>
-                                <img className={style.search__img} src="/imgtest.png" />
-                                <div className={style.search__info}>
-                                    <div className={style.search__name}>Name</div>
-                                    <div className={style.search__rank}>Rank</div>
-                                    <div className={style.search__nation}>Quoc Gia</div>
-                                </div>
-                                <div className={style.search__lop}></div>
-                            </div>
-                        </div>
-                        <div className={style.search__item}>
-                            <div className={style.search__br}>
-                                <img className={style.search__img} src="/imgtest.png" />
-                                <div className={style.search__info}>
-                                    <div className={style.search__name}>Name</div>
-                                    <div className={style.search__rank}>Rank</div>
-                                    <div className={style.search__nation}>Quoc Gia</div>
-                                </div>
-                                <div className={style.search__lop}></div>
-                            </div>
-                        </div>
-                        <div className={style.search__item}>
-                            <div className={style.search__br}>
-                                <img className={style.search__img} src="/imgtest.png" />
-                                <div className={style.search__info}>
-                                    <div className={style.search__name}>Name</div>
-                                    <div className={style.search__rank}>Rank</div>
-                                    <div className={style.search__nation}>Quoc Gia</div>
-                                </div>
-                                <div className={style.search__lop}></div>
-                            </div>
-                        </div>
+                        <Card />
                     </div>
                 </div>
             </div>

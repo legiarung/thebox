@@ -7,8 +7,7 @@ const index = () => {
         <Layout>
             <SearchAdvanced />
         </Layout>
-    );
-};
-
+    )
+}
 
 export default index;

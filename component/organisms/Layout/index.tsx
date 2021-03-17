@@ -7,7 +7,7 @@ import style from './Layout.module.scss'
 
 const index = (props: any) => {
     return (
-        <div>
+        <>
             <Head>
                 <title>The Box</title>
                 <meta charSet="utf-8" />
@@ -18,7 +18,7 @@ const index = (props: any) => {
             <Menu />
             <div className={style.container}>{props.children}</div>
             <Footer />
-        </div>
+        </>
     );
 };
 
