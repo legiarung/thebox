@@ -2,12 +2,24 @@ import { createAction, handleActions } from 'redux-actions'
 import { get, post, remove, put } from '../util/api'
 
 export const SET_CAMPAIGNS = `SET_CAMPAIGNS`
+export const SET_DETAIL = `SET_DETAIL`
 export const setCampaigns = createAction(SET_CAMPAIGNS)
+export const setDetail = createAction(SET_DETAIL)
+
 
 export const fetchProducts = () => async dispatch => {
     try {
-        const res = await get('https://5e83062078337f00160ae8ec.mockapi.io/api/products')
+        const res = await get('https://5f34e54a9124200016e190eb.mockapi.io/api/products')
         dispatch(setCampaigns(res.data))
+    } catch (e) {
+        console.log('error')
+    }
+}
+
+export const fetchProductsId = (id) => async dispatch => {
+    try {
+        const res = await get(`https://5f34e54a9124200016e190eb.mockapi.io/api/products/${id}`)
+        dispatch(setDetail(res.data))
     } catch (e) {
         console.log('error')
     }
@@ -43,11 +55,13 @@ export const fetchProducts = () => async dispatch => {
 // }
 
 interface ConponCampaignState {
-    campaigns: []
+    campaigns: [],
+    detail: {}
 }
 
 const initialState: ConponCampaignState = {
-    campaigns: []
+    campaigns: [],
+    detail: {}
 }
 
 export default handleActions<ConponCampaignState>(
@@ -55,6 +69,10 @@ export default handleActions<ConponCampaignState>(
         [SET_CAMPAIGNS]: (state, { payload }) => ({
             ...state,
             campaigns: payload
+        }),
+        [SET_DETAIL]: (state, { payload }) => ({
+            ...state,
+            detail: payload
         })
     },
     initialState
