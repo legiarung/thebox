@@ -1,7 +1,13 @@
-import ProductData from './ProductData'
+import RankStar from './RankStar'
+import ExternalView from './ExternalView'
+import InternalView from './InternalView'
+import ProfileKol from './ProfileKol'
 
 const reducers = {
-    ProductData,
+    RankStar,
+    ExternalView,
+    InternalView,
+    ProfileKol
 }
 
 export default reducers

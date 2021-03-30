@@ -1,27 +1,54 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux'
+import { fetchProfileKol } from '../../../redux/modules/ProfileKol'
+import { useRouter } from 'next/router'
+import AboutProfile from '../../modcules/ProfileContent/AboutProfile/index'
+import PostProfile from '../../modcules/ProfileContent/PostProfile/index'
+import ImageProfile from '../../modcules/ProfileContent/ImageProfile/index'
+import VideoProfile from '../../modcules/ProfileContent/VideoProfile/index'
 import style from './Profile.module.scss'
+import { HairColorCategories, getKeyByValue } from '../../utils/Define'
 var classNames = require('classnames');
 
 const index = () => {
+    const router = useRouter()
+    const { id } = router.query
+    const dispatch = useDispatch()
+    useEffect(() => {
+        dispatch(fetchProfileKol(id))
+    }, [id]);
+    const { profileKol } = useSelector(state => state.ProfileKol)
+    console.log(profileKol.background)
+
     const [show1, setshow1] = useState(true);
     const [show2, setshow2] = useState(false);
     const [show3, setshow3] = useState(false);
+    const [show4, setshow4] = useState(false);
     const handleShow1 = () => {
-        console.log('hehe')
         setshow1(true)
         setshow2(false)
         setshow3(false)
+        setshow4(false)
     }
     const handleShow2 = () => {
         setshow2(true)
         setshow1(false)
         setshow3(false)
+        setshow4(false)
     }
     const handleShow3 = () => {
-        console.log('hehe')
         setshow3(true)
         setshow1(false)
         setshow2(false)
+        setshow4(false)
+    }
+
+    const handleShow4 = () => {
+        setshow4(true)
+        setshow1(false)
+        setshow2(false)
+        setshow3(false)
+
     }
     return (
         <div className={style.profile__container}>
@@ -39,11 +66,10 @@ const index = () => {
                     </div>
                 </div>
                 <div className={style.profile__user}>
-                    <div className={style.profile__avatar}>
-                    </div>
+                    <img className={style.profile__avatar} src={profileKol.background} onError={e => { e.currentTarget.src = "/imgtest.png"; }} alt={profileKol.pornStarName} />
                     <div className={style.profile__name}>
-                        Trần Huyền Phương Linh
-                        <p className={style.profile__location}>HCM</p>
+                        {profileKol.pornStarName}
+                        <p className={style.profile__location}>{profileKol.city}</p>
                     </div>
                 </div>
                 <div className={style.profile__info}>
@@ -74,46 +100,28 @@ const index = () => {
                     })}>
                         Ảnh
                     </div>
+                    <div onClick={handleShow4} className={classNames(style.profile__menu__tab, {
+                        [style.profile__active]: show4
+                    })}>
+                        Video
+                    </div>
                 </div>
                 <div className={style.profile__detail}>
                     {show1 && (
-                        <div className={style.profile__description}>
-                            Thông báo: Nền tảng kết nối nhãn hàng - người ảnh hưởng “Influencer Platform” là một trong những dự án lớn của Blue Agency, cần nhiều thời gian công sức và chất xám để hoàn thiện. Ứng dụng và Website đang trong thời gian thử nghiệm và phát triển, cảm ơn quý khách đã tin tưởng và liên hệ đến Blue Agency
-                        </div>
+                        <AboutProfile profileKol={profileKol} />
                     )}
                     {
                         show2 && (
-                            <div className={style.profile__content}>
-                                Quỳnh Anh Shyn tên thật là Phí Quỳnh Anh cái tên rất nổi bật trong lứa hot girl thế hệ mới của Hà Nội từ những năm 2010. Cô nàng xuất hiện với mật độ phủ sóng dày đặc trên khắp các mặt báo dành cho tuổi teen.  Quỳnh Anh Shyn tên thật là Phí Quỳnh Anh, sinh ngày 2/12/1996 tại Hà Nội.
-                                Xuất hiện trong thời kỳ danh hiệu hot girl nhiều như nấm sau mưa, Quỳnh Anh Shyn nổi bật với gương mặt bầu bĩnh, dễ thương và lực học tương đối ổn. Cô nàng nhanh chóng nhận được sự ủng hộ nhiệt tình từ phía cư dân mạng.
-
-                                Ngoài ra cô được biết đến là một vlogger làm đẹp được theo dõi đông đảo trên youtube, cô nàng chủ yếu chia sẻ về bí quyết trang điểm.  Với phong cách make-up đa dạng phù hợp với từng độ tuổi, hoàn cảnh,… nên Quỳnh Anh đã nhận được sự quan tâm và mến mộ của nhiều chị em phụ nữ.
-                                Cô từng học tại Trường THCS Giảng Võ, FPT School Bussiness - FSB.
-
-
-                                
-                                Cô gái sinh năm 1996 này bắt đầu tiếp xúc với nghệ thuật qua việc làm người mẫu ảnh trên nhiều trang mạng.
-
-                                Năm 2015, với vai diễn Tường Vy công chúa trong bộ phim sitcom 5S Online, Quỳnh Anh đã chính thức góp mặt trong lĩnh vực phim truyền hình.
-
-                                Ngoài vẻ đẹp hồn nhiên, trong sáng, Quỳnh Anh Shyn còn rất được chú ý bởi chuyện tình cảm trong mơ cùng hot boy Bê Trần. Tuy nhiên hiên giờ hai người đã chia tay!.
-                            </div>)}
+                            <PostProfile profileKol={profileKol} />
+                        )}
                     {
                         show3 && (
-                            <div className={style.profile__album}>
-                                <div className={style.profile__album__item}>
-                                    <img className={style.profile__album__img} src="/imgtest.png" />
-                                </div>
-                                <div className={style.profile__album__item}>
-                                    <img className={style.profile__album__img} src="/imgtest.png" />
-                                </div>
-                                <div className={style.profile__album__item}>
-                                    <img className={style.profile__album__img} src="/imgtest.png" />
-                                </div>
-                                <div className={style.profile__album__item}>
-                                    <img className={style.profile__album__img} src="/imgtest.png" />
-                                </div>
-                            </div>
+                            <ImageProfile profileKol={profileKol} />
+                        )
+                    }
+                    {
+                        show4 && (
+                            <VideoProfile profileKol={profileKol} />
                         )
                     }
                 </div>

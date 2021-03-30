@@ -1,0 +1,120 @@
+.list {
+    &__kol {
+        width: 100%;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        padding: 10px 0 30px 0;
+        margin: 0 0 30px 0;
+    }
+
+    &__header {
+        width: 100%;
+        display: flex;
+        margin: 0 0 10px 0;
+        border-bottom: 2px solid #008d7f;
+    }
+
+    &__content {
+        width: 100%;
+    }
+
+    &__title {
+        height: 30px;
+        width: 90px;
+        line-height: 30px;
+        text-align: center;
+        background-color: #008d7f;
+        color: white;
+    }
+
+    &__title__name {
+        font-size: 20px;
+        color: #111;
+        margin: 0 0 0 10px;
+    }
+
+    &__item {
+        background-color: white;
+        object-fit: cover;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.02);
+        }
+    }
+
+    &__img {
+        height: 100%;
+        width: 97%;
+    }
+
+    &__rank {
+        height: 25px;
+        font-size: 20px;
+        position: absolute;
+        width: 25px;
+        top: 0px;
+        display: flex;
+        left: 0px;
+        justify-content: center;
+        border-bottom: 1px solid #fff;
+        border-right: 1px solid #fff;
+        color: #fff;
+    }
+
+    &__info {
+        position: absolute;
+        z-index: 4;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        bottom: 15px;
+    }
+
+    &__name {
+        font-size: 13px;
+        font-weight: 700;
+        color: #fff;
+        margin: 0 0 5px 0;
+    }
+
+    &__sub {
+        font-size: 10px;
+        color: #fff;
+        margin: 0 0 5px 0;
+    }
+
+    &__external {
+        font-size: 10px;
+        color: #fff;
+    }
+
+    &__lop {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 100% 0 0 0;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.868785014) 0%, rgba(0, 0, 0, 0) 100%);
+        z-index: 1;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+    .list {
+        &__selection {
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: auto;
+            padding: 0 5px;
+        }
+
+        &__kol {
+            margin: 0 0 20px 0;
+        }
+    }
+}

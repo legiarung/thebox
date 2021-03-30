@@ -1,0 +1,46 @@
+.social {
+    grid-column: 2 / 3;
+    margin: 0 0 30px 30px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+
+    &__title {
+        color: white;
+        border-bottom: 2px solid #008d7f;
+    }
+
+    &__title__name {
+        height: 30px;
+        width: 90px;
+        line-height: 30px;
+        text-align: center;
+        background-color: #008d7f;
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: 33.33% 33.33% 33.33%;
+        grid-template-rows: auto auto;
+    }
+
+    &__item {
+        height: 100%;
+        text-align: center;
+        line-height: 25px;
+    }
+
+    &__item__social {
+        border: 1px solid #ededed;
+        text-align: center;
+        margin: 10px 7px;
+        padding: 10px 6px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+    .social {
+        grid-column: auto;
+        margin: 0 0 20px 0;
+        padding: 0;
+    }
+}
